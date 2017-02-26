@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>checkbox、radio</title>
+    <style type="text/css" media="screen">
+    input {
+        display: none;
+    }
+
+    .radiobox label {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #d9d9d9;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .radiobox input[type=radio]:checked + label {
+        border-color: #d73d32;
+    }
+
+    .radiobox input[type=radio]:checked + label::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #d73d32;
+        left: 50%;
+        top: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        border-radius: 50%;
+    }
+
+    label {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #d9d9d9;
+        position: relative;
+    }
+
+    .checkbox input[type=checkbox]:checked + label {
+        border-color: #d73d32;
+    }
+
+    .checkbox input[type=checkbox]:checked + label::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -3px;
+        margin-top: -6px;
+        border: 2px solid #d73d32;
+        border-top: none;
+        border-left: none;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .radiobox2 {
+        width: 16px;
+        height: 16px;
+        background: url('img/99322cf8c3283e42.png') -24px -10px no-repeat;
+    }
+
+    .checkbox2 {
+        width: 16px;
+        height: 16px;
+        background: url('img/99322cf8c3283e42.png') -24px -32px no-repeat;
+    }
+
+    .radiobox2 input[type=radio]:checked + label {
+       background: url('img/99322cf8c3283e42.png') -59px -10px no-repeat;
+    }
+
+    .checkbox2 input[type=checkbox]:checked + label {
+       background: url('img/99322cf8c3283e42.png') -60px -32px no-repeat;
+    }
+    </style>
+</head>
+
+<body>
+    //伪元素
+    <div class="radiobox">
+        <input type="radio" name="radio1" id="radiobox1">
+        <label for="radiobox1"></label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="" id="checkbox1">
+        <label for="checkbox1"></label>
+    </div>
+    //雪碧图
+    <div class="radiobox2">
+        <input type="radio" name="radio1" id="radiobox3">
+        <label for="radiobox3" style="border:none;"></label>
+    </div>
+    <div class="checkbox2">
+        <input type="checkbox" name="" id="checkbox3">
+        <label for="checkbox3" style="border:none;"></label>
+    </div>
+</body>
+
+</html>
